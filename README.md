@@ -301,3 +301,20 @@ npm run electron:dev
 
 却能正常显示内容。
 
+更新：经过高人提醒，代码 `main.js` 里面的 `__dirname` 不存在，八成是我之前看了什么过时教程导致的，将原有的：
+
+```js
+win.loadFile(path.join(__dirname, 'dist', 'index.html'));
+```
+
+改成：
+
+```js
+win.loadFile(path.join(app.getAppPath(), 'dist', 'index.html'));
+```
+
+后问题解决：
+
+![](assets/normal2.png)
+
+谢谢大家！！
