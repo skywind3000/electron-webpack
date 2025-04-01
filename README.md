@@ -192,6 +192,12 @@ npm run electron:dev
 
 开始调试。
 
+可以看到正常弹出 electron 窗口并显示内容：
+
+![](assets/normal.png)
+
+到目前为止各个功能都符合预期。
+
 ## 程序打包（碰到问题）
 
 项目根目录：
